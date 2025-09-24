@@ -1,0 +1,58 @@
+body {
+    background-image: url('/img/WhatsApp\ Image\ 2025-08-13\ at\ 08.53.25_03d73b34.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   min-height: 100vh;
+   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    background-color: white;
+    
+}
+
+.navbar{
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content:space-between;
+   
+}
+
+.bp3mi{
+    width: 200px;
+    margin-left: 5%;
+}
+
+.kump-gambar{
+    width: 200px;
+   
+    margin-right: 20px;
+    display: flex;
+}
+
+.container1{
+    width: 100%;
+    margin-left: 40%;
+}
+
+.bendera{
+    width: 100px;
+    margin-right: 15px;
+    filter: drop-shadow(0px 10px 25px rgba(0,0,0,0.3));
+}
+
+.garuda{
+    width: 80px;
+}
+
+
+

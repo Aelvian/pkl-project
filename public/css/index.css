@@ -1,0 +1,372 @@
+body {
+    padding:0;
+    margin:0;
+    background-color: whitesmoke;
+}
+
+.tempat {
+    display: inline;
+    width: 0px;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: blue;
+    position: fixed;
+    padding: 10px;
+    overflow: scroll;
+    top: 0;
+    left: -30px;
+    transition: 0.3s;
+}
+
+.kotak {
+    width: auto;
+    text-align: center;
+    color: white;
+    font-size: large;
+    padding-top:10px;
+}
+
+.sidebar {
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: blue;
+}
+
+.sidebar li {
+    padding: 30px;
+    justify-content: space-between;
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    left: 0%;
+    overflow:auto;
+}
+
+
+.sidebar a{
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    display: block;
+    padding: 10px 20px;
+    margin-left: 20%;
+    width: 100%;
+    
+ }
+
+.sidebar img {
+    width: 30px;
+    position: absolute;
+    left: 0;
+    gap: 10px;
+    display:flex;
+    padding-top: 3%;
+ }
+
+ .sidebar a:hover {
+    background-color: darkblue;
+ }
+
+.content {
+padding: 20px;
+display:flex;
+gap: 3%;
+width: 100%;
+background-color: white;
+box-shadow: 5px 5px 5px black;
+
+
+ }
+
+ .tmbl {
+   background-color: white;
+   border: none;
+   outline: none;
+   color:black;
+   font-size: large;
+   cursor: pointer;
+
+ }
+
+ .parkir {
+    display: flex;
+    width:16rem ;
+    padding:10px;
+    border-radius: 4%;
+    width: 100%;
+    justify-content: space-between;
+    
+ }
+ 
+
+ .content img {
+    width: 50px;
+ }
+
+
+
+ .paragraf {
+    margin-left: 5%;
+    box-sizing: border-box;
+    background-color: blue;
+    color: white;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+ }
+
+ .paragraf p{
+    display: block;
+    margin-top: 0%;
+    font-size: small;
+    font-family:Georgia, 'Times New Roman', Times, serif
+ }
+
+ /* bagian main */
+
+ 
+
+.tempatpenomoran .nomor {
+ background-color: whitesmoke;
+ padding: 20px;
+ margin-top: 20px;
+ width: 100%;
+ left: 0;
+
+}
+
+.kontak {
+   background-color: whitesmoke;
+   box-sizing: border-box;
+   width: 14em;
+   padding: 10px;
+   border-radius: 20px;
+   width: 100%;
+   display: flex;
+   
+}
+
+.card {
+   background-color: white;
+   width: 12em;
+   padding: 10px;
+   border-radius: 10%;
+   margin-left:11%;
+   box-shadow: 5px 5px 5px black;
+}
+
+/* stop */
+
+.footerCard{
+    margin-top: 0;
+    margin-top: 6%;
+    width: 102%;
+    height: auto;
+    background-color: blue;
+    
+}
+.child {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.children {
+    color:white;
+    margin-left: 15px;
+    padding-top: 5px;
+    width: 60%;
+}
+
+
+.backgroundTable  {
+    width: 102%;
+    text-align: center;
+    margin-top: 50px;
+    height: auto;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    box-sizing:border-box;
+}
+
+table {
+    width: 80%;
+    padding: 10px 20px;
+    
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
+
+td {
+    background-color: white;
+    color: black;
+}
+
+.backgroundTable p {
+    color: black;
+    left: 0;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.font {
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.lanjutan {
+    padding: 10px 20px;
+    width: 50%;
+    color:white;
+}
+
+.buttun {
+    background-color: blue;
+    padding: 10px;
+    width: 100px;
+    border-radius: 999px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.buttun:hover {
+    background-color: darkblue;
+    color: white;
+    box-shadow: 0px 3px 6px blue;
+   cursor: pointer;
+   transition: all 0.1s;
+   transform: translateY(-3px);
+}
+
+.btn-hapus {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn-hapus:hover {
+    background-color: darkred;
+    color: white;
+    box-shadow: 0px 3px 6px red;
+   cursor: pointer;
+   transition: all 0.1s;
+   transform: translateY(-3px);
+}
+
+.btn-edit {
+    background-color: purple;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn-edit:hover {
+    background-color: darkorchid;
+    color: white;
+    box-shadow: 0px 3px 6px purple;
+   cursor: pointer;
+   transition: all 0.1s;
+   transform: translateY(-3px);
+}
+
+
+.welcome {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 27%;
+    font-size: large;
+    display: block;
+  }
+
+  .log-out{
+    margin-left: 13%;
+}
+
+.btn-logout{ 
+width: 100%;
+padding: 12px;
+background-color: #2980b2;
+color: white;
+font-size: 16px;
+font-weight: bold;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.con-garuda{
+    width: 20%;
+    margin-right: 3%;
+    display: flex;
+    padding: 10px;
+
+}
+
+.child-lambang{
+    width: 50%;
+    padding-top:3px; 
+}
+
+img.lambang{
+    width: 95px;
+    filter: drop-shadow(0px 10px 25px rgba(0,0,0,0.3));
+
+}
+img.kp2mi{
+    width: 200px;
+}
+
+.name{
+    width: auto;
+    margin-right:5%;
+}
+
+.name1{
+   
+    display: flex;
+}
+
+.succes{
+    width: 200px;
+    padding: 5px;
+    background-color: green;
+    margin-top: 20px;
+    margin-left: 15px
+}
+
+.error{
+    width: 200px;
+    padding: 5px;
+    background-color: red;
+    margin-top: 20px;
+    margin-left: 15px;
+    color:white;
+}
+
+@media(max-width: 600px){
+.parkir{
+    width: 100%;
+}
+
+img.lambang{
+  display: none;
+}
+p.welcome{
+   display: none;
+}
+
+p.name1{
+    display: none;
+}
+
+} 
+
