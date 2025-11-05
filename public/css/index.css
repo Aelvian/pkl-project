@@ -356,10 +356,12 @@ img.kp2mi{
 @media(max-width: 600px){
 .parkir{
     width: 100%;
+    justify-content: none;
 }
 
 img.lambang{
-  display: none;
+ width: 95px;
+ 
 }
 p.welcome{
    display: none;

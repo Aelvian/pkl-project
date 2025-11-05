@@ -3,6 +3,8 @@
 @section('content')
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <style>
     .container{
         width:100%;
@@ -29,7 +31,7 @@
     }
 
     .button{
-        width: 7%;
+        width: 50px;
         border-radius: 99px;
         background-color: blue;
         color: white;
@@ -74,7 +76,23 @@
                         <form action="{{ route('destroy.response', $response->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="btn-hapus" type="submit" onclick="return confirm('apakah anda yakin ingin menghapus pesan ini?')"><i style="margin-right: 10px;" class="fi fi-rr-trash"></i></button>
+                            <button style="background-color: red;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i style="margin-right: 10px;" class="fi fi-rr-trash"></i></button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel"><img style="width: 20%; margin-right: 5%;" src="{{ asset('img/Group 2.png') }}" alt="">Info Penting</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                      Apakah Anda yakin ingin menghapusnya?
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="submit" class="btn btn-primary">Oke</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                         </form>
                     </td>
                     @endif

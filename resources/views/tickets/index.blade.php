@@ -66,7 +66,7 @@
 }
 .child {
     display: block;
-    width: 200px;
+    width: 300px;
     padding: 10px 20px;
   
 }
@@ -187,7 +187,7 @@ td {
     }
 
  .consearch {
-  width: 100%;
+  width: 100% !important;
 }
 
 .search {
@@ -256,7 +256,7 @@ td {
     background-color: blue;
  }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   table,
   thead,
   tbody,
@@ -290,7 +290,20 @@ td {
   .buttun{
     width: 100%;
   }
+  .child {
+    display: block;
+    width: 220px !important;
+    padding: 10px 20px;
+  
 }
+
+.consearch{
+  width: 148% !important ;
+ 
+}
+
+}
+
 
 </style>
 
@@ -300,7 +313,7 @@ td {
     <p class="welcome1">Data Pelayanan Pengajuan</p>
     @if (auth()->user()->role == "admin")
     <div class="consearch">
-        <input type="text" id="myInput" class="search" placeholder="Cari Nama / Email / Status / Tanggal">
+        <input  type="text" id="myInput" class="search" placeholder="Cari Nama / Status / Tanggal">
       </div> 
     @endif
 

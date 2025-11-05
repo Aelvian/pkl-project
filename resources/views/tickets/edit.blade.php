@@ -32,8 +32,8 @@
         <option value="BP3MI Kepulauan riau" {{ $ticket->tempatan == 'BP3MI Kepulauan riau' ? 'selected' : '' }}>BP3MI Kepulauan riau</option>
       </select>
 
-      <label for="">Pdf Only</label>
-      <input type="file" name="file" style="margin-bottom: 10px;">
+      <label for="">Surat Keterangan</label>
+      <input type="file" name="file" style="margin-bottom: 10px; outline: none; padding: 10px;" value="{{ $ticket->name_file }}" >
 
       <label for="title">Title Jabatan</label>
       <input type="text" name="title" value="{{ $ticket->title }}" placeholder="Jabatan" >

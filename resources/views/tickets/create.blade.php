@@ -33,7 +33,8 @@
 
 
 
-      <label for="">Pdf Only</label>
+      <label for="">Surat Keterangan</label>
+      <p style="color:red">*Pdf Only</p>
       <input type="file" name="file" required style="margin-bottom: 10px;">
 
       <label for="title">Jabatan</label>
