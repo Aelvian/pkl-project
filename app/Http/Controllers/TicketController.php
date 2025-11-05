@@ -46,7 +46,7 @@ class TicketController extends Controller
             'keterangan' => 'required',
             'title' => 'nullable|string',
             'tempatan' => 'required|string',
-            'file' => 'required|file|mimes:pdf,doc,docx|max:100048'  
+            'file' => 'required|file|mimes:pdf,doc,docx|max:102048'  
         // maximal dari sebuah file adalah 100 Mb, dan file yang relate hanya pdf,doc,docx
         ]);
 
@@ -153,7 +153,7 @@ class TicketController extends Controller
 
             'tempatan' => 'required|string',
 
-            'file'  => 'required|file|mimes:pdf,doc,docx|max:100048', 
+            'file'  => 'required|file|mimes:pdf,doc,docx|max:102048', 
            // maximal dari sebuah file adalah 100 Mb, dan file yang relate hanya pdf,doc,docx
             
         ]);

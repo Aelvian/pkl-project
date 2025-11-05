@@ -326,6 +326,7 @@ img.kp2mi{
 }
 
 .name{
+    margin-top: 3px;
     width: auto;
     margin-right:5%;
 }

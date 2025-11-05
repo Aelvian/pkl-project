@@ -45,7 +45,12 @@
 </style>
 
 <article>
-<h2>Nama {{ $ticket->nama_lengkap }}</h2>
+    @if (auth()->user()->role == 'admin')
+    <h2>Nama {{ $ticket->nama_lengkap }}</h2>
+    @else
+        <h2>Chat dengan Admin</h2>
+    @endif
+
 
 <p> Status : <strong>{{ $ticket->pengajuan }}</strong></p>
 
