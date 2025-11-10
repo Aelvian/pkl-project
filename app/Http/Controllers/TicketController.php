@@ -213,10 +213,8 @@ class TicketController extends Controller
 
      public function destroy( $id)// Menghapus Bagian berdasarkan id / pilihan yang dipilih
     {
-        //komputer akan menemukan bagian yang dihapus berdasarkan id
-        $ticket = Ticket::findOrFail($id);
-        //lalu menghapusnya
-        $ticket->delete();
+        //komputer akan menemukan bagian yang dihapus berdasarkan id lalu akan dihapus
+         Ticket::findOrFail($id)->delete();
         // lalu akan kembali ke bagian halaman awal pada sebuah web
         return redirect()->route('tickets.index')->with('succes', 'Berhasil Hapus');   
     }

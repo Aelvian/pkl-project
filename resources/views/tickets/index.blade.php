@@ -292,8 +292,9 @@ td {
   }
   .child {
     display: block;
-    width: 220px !important;
+    width: 250px !important;
     padding: 10px 20px;
+    justify-content: space-between;
   
 }
 
@@ -380,28 +381,30 @@ td {
        <form action="{{ route('tickets.destroy', $ticket->id) }}" method="POST">
         @csrf
         @method('DELETE')
-        <button style="background-color: red;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i style="margin-right: 10px;" class="fi fi-rr-trash"></i>
-            Hapus
-          </button>
-          
-          <!-- Pop up -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel"><img style="width: 20%; margin-right: 5%;" src="{{ asset('img/Group 2.png') }}" alt="">Info Penting</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Apakah Anda yakin ingin menghapusnya?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Oke</button>
-                </div>
-              </div>
+        
+        <!-- Tombol buka modal -->
+        <button style="background-color: red;" type="button" class="btn btn-primary" 
+        data-bs-toggle="modal" data-bs-target="#modalDelete{{ $ticket->id }}">
+    <i style="margin-right: 10px;" class="fi fi-rr-trash"></i>Hapus
+</button>
+
+<!-- Modal Hapus -->
+<div class="modal fade" id="modalDelete{{ $ticket->id }}" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5"><img style="width: 20%; margin-right: 5%;" src="{{ asset('img/Group 2.png') }}">Info Penting</h1>
             </div>
-          </div>
+            <div class="modal-body">
+                Apakah Anda yakin ingin menghapusnya?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Oke</button>
+            </div>
+        </div>
+    </div>
+</div>
       </td>
     </form>
       {{-- ini adalah bagian dimana bisa untuk chat admin / User--}}

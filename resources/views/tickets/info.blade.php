@@ -75,7 +75,7 @@
     <p>Keterangan : {{ $ticket->keterangan }}</p>
     <p>jabatan : {{ $ticket->title }}</p>
     <p>Unit Kerja : {{ $ticket->tempatan }}</p>
-    <p>{{ $ticket->name_file }} </p>
+    <p>Nama File : {{ $ticket->name_file }} </p>
     <div class="link">
     <form action="{{ route('tickets.view', $ticket->id, ) }}" target="_blank">
         <button type="submit" class="link-1"><i style="margin-right:10px;" class="fi fi-rr-eye"></i>Preview</button>

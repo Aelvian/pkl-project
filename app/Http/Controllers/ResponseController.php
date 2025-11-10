@@ -25,16 +25,19 @@ class ResponseController extends Controller
             'message' => $request->message,
         ]);
         // jika sudah melakukan nya maka langsung kembali ke tickets.show
-        return redirect()->route('tickets.show', $ticket)->with('succes', 'Balasan Terkirim');
+        return redirect()->route('tickets.show', $ticket);
     }
     public function destroy ($id){ // bagian untuk menghapus pesan
 
         // komputer akan mencari berdasarkan id dari pilihan  user
-        $response = Response::findOrFail($id);
-
+       
+            Response::findOrFail($id)->delete();
+            return back();
+        
+        
         // jika sudah ketemu maka delete semuanya
-        $response->delete();
+       
         // lalu jika berhasil maka tampilkan pesan  "pesan berhasil dihapus"
-        return redirect()->route('tickets.show', $response->ticket_id)->with('succes', 'pesan berhasil dihapus');
+        
     }
 }

@@ -24,10 +24,12 @@
         margin-right: 3%;
         border-radius: 99px;
         margin-left: 2%;
+        
     }
 
     .tmp-pesan{
         display: flex;
+     
     }
 
     .button{
@@ -44,10 +46,26 @@
     margin-bottom: 10px;
     
 }
+@media (max-width:768px) {
+    .pesan1{
+        width:330px;
+        padding: 10px 5px;
+        margin-right: 3%;
+        border-radius: 99px;
+        margin-left: 2%;
+}
+.tmp-pesan{
+        display: flex;
+       position: fixed;
+       padding: 3px;
+       margin-left: 3%;
+ }
+}
 </style>
 
 <article>
     @if (auth()->user()->role == 'admin')
+    <hr>
     <h2>Nama {{ $ticket->nama_lengkap }}</h2>
     @else
         <h2>Chat dengan Admin</h2>
@@ -57,7 +75,7 @@
 <p> Status : <strong>{{ $ticket->pengajuan }}</strong></p>
 
 <section>
-    <p>Keterangan {{ $ticket->keterangan }}</p>
+    <p>Keterangan : {{ $ticket->keterangan }}</p>
 </section>
 
 <section>
@@ -76,24 +94,32 @@
                         <form action="{{ route('destroy.response', $response->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button style="background-color: red;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i style="margin-right: 10px;" class="fi fi-rr-trash"></i></button>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        
+                            <!-- Tombol buka modal -->
+                            <button style="background-color: red;" type="button" class="btn btn-primary" 
+                                    data-bs-toggle="modal" data-bs-target="#modalDelete{{ $response->id }}">
+                                <i style="margin-right: 10px;" class="fi fi-rr-trash"></i>
+                            </button>
+                        
+                            <!-- Modal Hapus -->
+                            <div class="modal fade" id="modalDelete{{ $response->id }}" tabindex="-1">
                                 <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel"><img style="width: 20%; margin-right: 5%;" src="{{ asset('img/Group 2.png') }}" alt="">Info Penting</h1>
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5"><img style="width: 20%; margin-right: 5%;" src="{{ asset('img/Group 2.png') }}">Info Penting</h1>
+                                        </div>
+                                        <div class="modal-body">
+                                            Apakah Anda yakin ingin menghapusnya?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Oke</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                      Apakah Anda yakin ingin menghapusnya?
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="submit" class="btn btn-primary">Oke</button>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
+                            </div>
                         </form>
+                        
                     </td>
                     @endif
                 
@@ -111,7 +137,7 @@
     <form action="{{ route('responses.store', $ticket) }}" method="POST">
         @csrf
         <div class="tmp-pesan">
-            <input class="pesan1" type="text" placeholder="Kirim Pesan" id="message" name="message" required></input>
+            <input class="pesan1" type="text" placeholder="  Kirim Pesan" id="message" name="message" required></input>
             <button class="button" type="submit"><i class="fi fi-sr-paper-plane-top"></i></button>
         </div>
 
